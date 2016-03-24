@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Flowers",
+    "description": "Ecce, ferox amor!",
+    "imageIntro": "flowers_intro.jpg",
+    "image": "flowers.jpg",
+    "details": "sample.html"
+  },
+  {
+    "title": "Something else",
+    "description": "Try tossing the milk lettuces with tangy olive oil and cocktail sauce, refrigerated.",
+    "imageIntro": "flowers_intro.jpg",
+    "image": "flowers.jpg",
+    "details": "sample.html"
+  }
+]
