@@ -1,4 +1,5 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';
+import {ArticleDetailsPage} from "../article-details/article-details";
 
 
 @Page({
@@ -18,5 +19,14 @@ export class ArticleListPage {
             description: "And some longer description. And some longer description"
         }
     ];
-    
+    private nav:NavController;
+
+
+    constructor(nav:NavController) {
+        this.nav = nav;
+    }
+
+    itemSelected(article) {
+        this.nav.push(ArticleDetailsPage, {article: article})
+    }
 }
