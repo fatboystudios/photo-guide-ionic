@@ -1,5 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
 import {ArticleDetailsPage} from "../article-details/article-details";
+import {Http, Response} from "angular2/http";
+import {Article} from "./../article/article";
 
 
 @Page({
@@ -7,23 +9,14 @@ import {ArticleDetailsPage} from "../article-details/article-details";
 })
 export class ArticleListPage {
 
-    articles = [
-        {
-            title: 'Title',
-            image: 'http://lorempixel.com/400/200/',
-            description: "Some short description"
-        },
-        {
-            title: 'Some other stuff',
-            image: 'http://lorempixel.com/400/200/',
-            description: "And some longer description. And some longer description"
-        }
-    ];
+    private articles:Array<Article>;
     private nav:NavController;
 
 
-    constructor(nav:NavController) {
+    constructor(nav:NavController, http:Http) {
         this.nav = nav;
+        http.get("build/content/repository.json")
+            .subscribe((res:Response) => this.articles = res.json().map(article => new Article(article)));
     }
 
     itemSelected(article) {

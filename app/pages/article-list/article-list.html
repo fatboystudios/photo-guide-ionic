@@ -3,13 +3,12 @@
 </ion-navbar>
 
 <ion-content padding class="article-list-page">
-    <h2>Article List</h2>
 
     <ion-list no-lines>
         <ion-item *ngFor="#article of articles" >
 
             <ion-card>
-                <img [src]="article.image"/>
+                <img [src]="article.imageIntroUrl"/>
                 <ion-card-content>
                     <ion-card-title>
                         {{article.title}}

@@ -1,11 +1,11 @@
 
 <ion-navbar *navbar>
   <ion-title>
-    Article details
+    {{article.title}}
   </ion-title>
 </ion-navbar>
 
 <ion-content class="article-details-page">
-  <p>{{article.title}}</p>
-  <p>{{article.description}}</p>
+  <img [src]="article.imageUrl"/>
+  <div [innerHTML]="htmlData" class="details-container"></div>
 </ion-content>
