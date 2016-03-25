@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     gulpWatch = require('gulp-watch'),
     del = require('del'),
-    argv = process.argv;
+    argv = process.argv,
+    env = process.env;
 
 /**
  * Ionic Gulp tasks, for more information on each see
@@ -27,7 +28,9 @@ gulp.task('clean', function(done){
 });
 
 function copyContent() {
-  gulp.src('content/**/*')
+  //noinspection JSUnresolvedVariable
+  var srcDir = env.CONTENT || 'content';
+  gulp.src(srcDir + '/**/*')
     .pipe(gulp.dest('www/build/content'));
 }
 
