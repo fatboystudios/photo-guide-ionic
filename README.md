@@ -10,3 +10,6 @@ In order to build app with real content you need to pass  `CONTENT` env variable
 
 Content need to be formatted similar to sample in [content](content) and has [repository.json](content/repository.json)
  
+### Preview in ionic view ###
+
+    $ ionic upload
