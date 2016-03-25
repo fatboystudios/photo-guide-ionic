@@ -2,6 +2,7 @@ import {Page, NavController} from 'ionic-angular';
 import {ArticleDetailsPage} from "../article-details/article-details";
 import {Http, Response} from "angular2/http";
 import {Article} from "./../article/article";
+import {ArticleIntroPage} from "../article-intro/article-intro";
 
 
 @Page({
@@ -20,6 +21,6 @@ export class ArticleListPage {
     }
 
     itemSelected(article) {
-        this.nav.push(ArticleDetailsPage, {article: article})
+        this.nav.push(ArticleIntroPage, {article: article})
     }
 }
