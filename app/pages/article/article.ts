@@ -3,6 +3,7 @@ export class Article {
     description:string;
     image:string;
     details:string;
+    intro:string;
     imageIntro:string;
 
 
@@ -12,6 +13,7 @@ export class Article {
         this.image = json.image;
         this.imageIntro = json.imageIntro;
         this.details = json.details;
+        this.intro = json.intro;
     }
 
 
@@ -25,5 +27,9 @@ export class Article {
 
     get detailsUrl():string {
         return 'build/content/' + this.details;
+    }
+
+    get introUrl():string {
+        return 'build/content/' + this.intro;
     }
 }
