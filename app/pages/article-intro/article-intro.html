@@ -8,7 +8,7 @@
 <ion-content class="article-details-page">
   <img [src]="article.imageIntroUrl"/>
   <div [innerHTML]="htmlData" class="details-container"></div>
-  <ion-row>
+  <ion-row *ngIf="showReadMoreButton()">
     <ion-col class="center" ><button center outline (click)="readMore()">Read more</button></ion-col>
   </ion-row>
 

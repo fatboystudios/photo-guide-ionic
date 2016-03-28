@@ -5,6 +5,7 @@ export class Article {
     details:string;
     intro:string;
     imageIntro:string;
+    readMore:boolean;
 
 
     constructor(json) {
@@ -14,6 +15,7 @@ export class Article {
         this.imageIntro = json.imageIntro;
         this.details = json.details;
         this.intro = json.intro;
+        this.readMore = 'true' === json.readMore;
     }
 
 

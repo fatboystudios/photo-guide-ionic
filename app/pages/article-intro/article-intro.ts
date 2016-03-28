@@ -24,4 +24,8 @@ export class ArticleIntroPage {
         this.nav.push(ArticleDetailsPage, {article: this.article})
     }
 
+    showReadMoreButton():boolean {
+        return this.article.readMore;
+    }
+
 }
