@@ -2,9 +2,9 @@
     <ion-title>Articles</ion-title>
 </ion-navbar>
 
-<ion-content padding class="article-list-page">
+<ion-content class="article-list-page">
 
-    <ion-list no-lines>
+    <ion-list>
         <ion-item (click)="itemSelected(article)" *ngFor="#article of articles">
             <ion-thumbnail item-left>
                 <img src="{{article.imageIntroUrl}}">
