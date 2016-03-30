@@ -2,6 +2,7 @@ import {Page, NavParams, NavController} from 'ionic-angular';
 import {Http, Response} from "angular2/http";
 import {Article} from "../article/article";
 import {ArticleDetailsPage} from "../article-details/article-details";
+import {PictureSettingsPage} from "../picture-settings/picture-settings";
 
 
 @Page({
@@ -26,6 +27,10 @@ export class ArticleIntroPage {
 
     showReadMoreButton():boolean {
         return this.article.readMore;
+    }
+
+    gotoPictureSettings() {
+        this.nav.push(PictureSettingsPage, {article: this.article})
     }
 
 }
