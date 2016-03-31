@@ -24,7 +24,7 @@ export class PictureSettingsPage {
     }
 
     save() {
-        this.storage.set(this.article.title, JSON.stringify(this.settings))
+        this.storage.set(this.article.title, JSON.stringify(this.settings));
         this.nav.pop();
     }
 
