@@ -1,11 +1,15 @@
-
 <ion-navbar *navbar>
-  <ion-title>
-    {{article.title}}
-  </ion-title>
+    <ion-title>
+        {{article.title}}
+    </ion-title>
+    <ion-buttons end>
+        <button (click)="gotoPictureSettings()">
+            <ion-icon name="aperture"></ion-icon>
+        </button>
+    </ion-buttons>
 </ion-navbar>
 
 <ion-content class="article-details-page">
-  <img [src]="article.imageUrl"/>
-  <div [innerHTML]="htmlData" class="details-container"></div>
+    <img [src]="article.imageUrl"/>
+    <div [innerHTML]="htmlData" class="details-container"></div>
 </ion-content>
