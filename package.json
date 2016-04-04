@@ -25,5 +25,7 @@
   "cordovaPlugins": [
     "cordova-sqlite-storage"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "ios"
+  ]
 }
